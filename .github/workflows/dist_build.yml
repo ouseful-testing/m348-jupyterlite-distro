@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: macos-amd-artifact
-          path: dist/myapp
+          path: dist/m348-jupyterlite
 
   build-macos-arm:
     name: Build macOS ARM
@@ -54,7 +54,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: macos-arm-artifact
-          path: dist/myapp
+          path: dist/m348-jupyterlite
 
   build-linux:
     name: Build Linux
@@ -78,7 +78,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: linux-artifact
-          path: dist/myapp
+          path: dist/m348-jupyterlite
 
   build-windows:
     name: Build Windows
