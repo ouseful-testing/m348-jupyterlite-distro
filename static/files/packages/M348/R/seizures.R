@@ -1,0 +1,27 @@
+#' Clinical trial for testing a drug to reduce epileptic seizures
+#'
+#' The data come from a clinical trial of a new
+#' drug for reducing the number of seizures suffered by patients with epilepsy.
+#' The experiment was carried out on 15 patients attending the Westmead
+#' Hospital in Sydney, Australia. The patients were monitored for two periods.
+#' During one of these periods they took their usual drug and during the other the new drug. 
+#' Seven patients were given the new drug during the first period and the old drug in the second,
+#' and the other eight were given the new drug in the second period and the old
+#' drug in the first. There was a sufficient gap between time periods for there
+#' to be no residual effect of the treatment given in the first period carrying
+#' over to the second period.
+#' @format A data frame with 30 rows and 5 variables:
+#'
+#' \describe{
+#'    \item{patient}{patient number}
+#'    \item{numSeizures}{number of seizures during treatment period}
+#'    \item{exposure}{length of the period of observations (days)}
+#'    \item{treatment}{drug taken (0 = `usual', 1 = `new')}
+#'    \item{period}{treatment period (0 = `first', 1 = `second')}
+#' }
+#' @source Unpublished data provided by A. D. Lunn (an author of M346 Linear statistical modelling, a 
+#' predecessor module of M348).
+#' 
+#' @usage data(seizures)
+
+"seizures"

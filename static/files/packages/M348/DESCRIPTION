@@ -1,0 +1,15 @@
+Package: M348
+Type: Package
+Title: Bespoke data files and functions for use with M348
+Version: 1.3.4
+Date: 2021-10-08
+Author: Karen Vines
+Maintainer: Karen Vines <karen.vines@open.ac.uk>
+Description: Bespoke data files and functions for use with M348.
+License: GPL-3
+LazyData: true
+RoxygenNote: 7.1.1
+Encoding: UTF-8
+Depends: R (>= 3.5.0)
+NeedsCompilation: no
+Packaged: 2023-08-15 13:36:27 UTC; skv2
