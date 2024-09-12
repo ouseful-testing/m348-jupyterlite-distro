@@ -1,93 +1,14 @@
 name: Build Artifacts
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build-macos-amd:
-    name: Build macOS AMD
-    runs-on: macos-latest
-    strategy:
-      matrix:
-        architecture: [x86_64]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      - name: Build with PyInstaller
-        run: |
-          pyinstaller --onefile --add-data "static:static" --name m348-jupyterlite app.py
-
-      - name: Archive macOS AMD artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: macos-amd-artifact
-          path: dist/m348-jupyterlite
-
-  build-macos-arm:
-    name: Build macOS ARM
-    runs-on: macos-latest
-    strategy:
-      matrix:
-        architecture: [arm64]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      - name: Build with PyInstaller
-        run: |
-          pyinstaller --onefile --add-data "static:static" --name m348-jupyterlite app.py
-
-      - name: Archive macOS ARM artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: macos-arm-artifact
-          path: dist/m348-jupyterlite
-
-  build-linux:
-    name: Build Linux
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      - name: Build with PyInstaller
-        run: |
-          pyinstaller --onefile --add-data "static:static" --name m348-jupyterlite app.py
-
-      - name: Archive Linux artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: linux-artifact
-          path: dist/m348-jupyterlite
-          
   build-windows:
     name: Build Windows
     runs-on: windows-latest
@@ -100,13 +21,13 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+      - name: Ensure pip is installed
         run: |
-          pip install -r requirements.txt
+          python -m ensurepip
+          python -m pip install --upgrade pip
 
-      - name: Build with PyInstaller
-        run: |
-          pyinstaller --onefile --add-data "static:static" --name m348-jupyterlite app.py
+      - name: Run build script
+        run: build_script.bat
 
       - name: Archive Windows artifact
         uses: actions/upload-artifact@v3
