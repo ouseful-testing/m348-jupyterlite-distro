@@ -2,42 +2,21 @@
   "jupyter-config-data": {
     "appName": "JupyterLite",
     "appUrl": "./lab",
-    "appVersion": "0.4.0",
+    "appVersion": "0.4.1",
     "baseUrl": "./",
     "defaultKernelName": "python",
     "faviconUrl": "./lab/favicon.ico",
     "federated_extensions": [
       {
         "extension": "./extension",
-        "liteExtension": false,
-        "load": "static/remoteEntry.c3551e86769ef3973316.js",
-        "name": "@hadim/jupyter-archive",
-        "style": "./style"
-      },
-      {
-        "extension": "./extension",
-        "liteExtension": false,
-        "load": "static/remoteEntry.a1a4e0e795dca61023d3.js",
-        "name": "@jupyter-notebook/lab-extension",
-        "style": "./style"
-      },
-      {
-        "extension": "./extension",
-        "liteExtension": false,
-        "load": "static/remoteEntry.9f387e5e108e458f62c3.js",
-        "name": "@jupyter-widgets/jupyterlab-manager"
-      },
-      {
-        "extension": "./extension",
-        "liteExtension": false,
-        "load": "static/remoteEntry.afbfa74351e195593c24.js",
-        "name": "@jupyterlab-contrib/spellchecker",
-        "style": "./style"
+        "liteExtension": true,
+        "load": "static/remoteEntry.26d08a103ba745fd5c80.js",
+        "name": "@jupyterlite/pyodide-kernel-extension"
       },
       {
         "extension": "./extension",
         "liteExtension": true,
-        "load": "static/remoteEntry.7a5d7e9d1ceef9887364.js",
+        "load": "static/remoteEntry.27213568ad48ae687629.js",
         "name": "@r-wasm/jupyterlite-webr-kernel",
         "style": "./style"
       },
@@ -65,13 +44,6 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.c7a31b7a4c60a21a3aa0.js",
-        "name": "jupyterlab-open-url-parameter",
-        "style": "./style"
-      },
-      {
-        "extension": "./extension",
-        "liteExtension": false,
         "load": "static/remoteEntry.6e3a0c2dd12e1cd0ae76.js",
         "name": "jupyterlab-unfold",
         "style": "./style"
@@ -86,7 +58,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.5792a47aee7240a49818.js",
+        "load": "static/remoteEntry.2c65663133448bec9192.js",
         "name": "jupyterlab_empinken_extension",
         "style": "./style"
       },
@@ -380,7 +352,38 @@
     },
     "fullLabextensionsUrl": "./extensions",
     "fullStaticUrl": "./build",
-    "licensesUrl": "./lab/api/licenses"
+    "licensesUrl": "./lab/api/licenses",
+    "litePluginSettings": {
+      "@jupyterlite/pyodide-kernel-extension:kernel": {
+        "pipliteUrls": [
+          "./extensions/@jupyterlite/pyodide-kernel-extension/static/pypi/all.json?sha256=51497228ca9f94ef6de188830c651a1a05ff23b0ceb39cda94625cf99aa82539"
+        ]
+      }
+    },
+    "settingsOverrides": {
+      "@jupyterlab/codemirror-extension:plugin": {
+        "defaultConfig": {
+          "autoClosingBrackets": true
+        }
+      },
+      "@jupyterlab/notebook-extension:panel": {
+        "toolbar": [
+          {
+            "args": {},
+            "command": "docmanager:download",
+            "icon": "ui-components:download",
+            "label": "Download",
+            "name": "download",
+            "rank": 50
+          }
+        ]
+      },
+      "jupyterlab_cell_status_extension:plugin": {
+        "cell_flash_enable": true,
+        "cell_status_audio_error": false,
+        "cell_status_enable": true
+      }
+    }
   },
   "jupyter-lite-schema-version": 0
 }

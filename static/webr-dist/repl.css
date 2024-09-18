@@ -1,0 +1,469 @@
+/* node_modules/xterm/css/xterm.css */
+.xterm {
+  cursor: text;
+  position: relative;
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+.xterm.focus,
+.xterm:focus {
+  outline: none;
+}
+.xterm .xterm-helpers {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
+.xterm .xterm-helper-textarea {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  left: -9999em;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: -5;
+  white-space: nowrap;
+  overflow: hidden;
+  resize: none;
+}
+.xterm .composition-view {
+  background: #000;
+  color: #FFF;
+  display: none;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 1;
+}
+.xterm .composition-view.active {
+  display: block;
+}
+.xterm .xterm-viewport {
+  background-color: #000;
+  overflow-y: scroll;
+  cursor: default;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.xterm .xterm-screen {
+  position: relative;
+}
+.xterm .xterm-screen canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.xterm .xterm-scroll-area {
+  visibility: hidden;
+}
+.xterm-char-measure-element {
+  display: inline-block;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: -9999em;
+  line-height: normal;
+}
+.xterm.enable-mouse-events {
+  cursor: default;
+}
+.xterm.xterm-cursor-pointer,
+.xterm .xterm-cursor-pointer {
+  cursor: pointer;
+}
+.xterm.column-select.focus {
+  cursor: crosshair;
+}
+.xterm .xterm-accessibility,
+.xterm .xterm-message {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  color: transparent;
+  pointer-events: none;
+}
+.xterm .live-region {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.xterm-dim {
+  opacity: 1 !important;
+}
+.xterm-underline-1 {
+  text-decoration: underline;
+}
+.xterm-underline-2 {
+  text-decoration: double underline;
+}
+.xterm-underline-3 {
+  text-decoration: wavy underline;
+}
+.xterm-underline-4 {
+  text-decoration: dotted underline;
+}
+.xterm-underline-5 {
+  text-decoration: dashed underline;
+}
+.xterm-overline {
+  text-decoration: overline;
+}
+.xterm-overline.xterm-underline-1 {
+  text-decoration: overline underline;
+}
+.xterm-overline.xterm-underline-2 {
+  text-decoration: overline double underline;
+}
+.xterm-overline.xterm-underline-3 {
+  text-decoration: overline wavy underline;
+}
+.xterm-overline.xterm-underline-4 {
+  text-decoration: overline dotted underline;
+}
+.xterm-overline.xterm-underline-5 {
+  text-decoration: overline dashed underline;
+}
+.xterm-strikethrough {
+  text-decoration: line-through;
+}
+.xterm-screen .xterm-decoration-container .xterm-decoration {
+  z-index: 6;
+  position: absolute;
+}
+.xterm-screen .xterm-decoration-container .xterm-decoration.xterm-decoration-top-layer {
+  z-index: 7;
+}
+.xterm-decoration-overview-ruler {
+  z-index: 8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+}
+.xterm-decoration-top {
+  z-index: 2;
+  position: relative;
+}
+
+/* repl/components/Editor.css */
+.editor {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--bg-dark);
+  padding: 0 5px;
+}
+.editor-actions {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+.editor-actions > button {
+  background-color: transparent;
+  border: none;
+  color: var(--secondary);
+  font-size: 14px;
+  padding: 5px;
+}
+.editor-actions > button:hover {
+  color: var(--primary);
+}
+.editor-files {
+  display: flex;
+}
+.editor-file {
+  position: relative;
+  display: flex;
+  padding: 0 5px;
+  gap: 5px;
+  background-color: var(--bg-secondary);
+  color: var(--secondary);
+  border: 1px solid var(--bg-dark);
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.editor-file > .editor-filename {
+  font-size: 14px;
+  height: 26px;
+  line-height: 26px;
+}
+.editor-file.active {
+  color: var(--primary);
+  background-color: var(--bg-primary);
+  border-color: var(--bg-dark);
+  border-bottom-color: transparent;
+}
+.editor-file.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--bg-primary);
+}
+.editor-file > button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.editor-file > button.editor-switch {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.editor-file > button.editor-close {
+  color: var(--secondary);
+  font-weight: bold;
+  z-index: 1;
+}
+.editor-file > button.editor-close:hover {
+  color: var(--primary);
+}
+.editor-container {
+  min-width: 0;
+  min-height: 0;
+}
+.cm-editor {
+  border: none;
+  outline: none;
+  height: 100%;
+  font-size: 16px;
+}
+.cm-editor.cm-focused {
+  border: none;
+  outline: none;
+}
+
+/* repl/components/Plot.css */
+.plot {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.plot-background {
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  min-width: 0;
+}
+.plot-container {
+  max-width: 90%;
+  max-height: 90%;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+}
+.plot-container canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.plot-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--bg-dark);
+  background-color: var(--bg-primary);
+}
+.plot-actions > button {
+  background-color: transparent;
+  border: none;
+  color: var(--secondary);
+  padding: 5px;
+  font-size: 14px;
+}
+.plot-actions > button:hover {
+  color: var(--primary);
+}
+.plot-actions > button:disabled {
+  color: var(--disabled);
+}
+
+/* repl/components/Files.css */
+.files {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.files-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--bg-dark);
+}
+.files-header input {
+  display: none;
+}
+.files-actions > button {
+  background-color: transparent;
+  border: none;
+  color: var(--secondary);
+  padding: 5px;
+  font-size: 14px;
+}
+.files-actions > button:hover {
+  color: var(--primary);
+}
+.files-actions > button:disabled {
+  color: var(--disabled);
+}
+.directory {
+  font-size: 16px;
+  user-select: none;
+  padding: 0 10px;
+  overflow: auto;
+  color: var(--primary);
+}
+.directory .tree,
+.directory .tree-node,
+.directory .tree-node-group {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0px;
+}
+.directory .tree-node-group {
+  padding: 0;
+}
+.directory .tree-branch-wrapper,
+.directory .tree-node__leaf {
+  outline: none;
+  outline: none;
+}
+.directory .tree-node {
+  cursor: pointer;
+  border-left: 2px solid transparent;
+}
+.directory .tree-node:hover,
+.directory .tree-node:focus,
+.directory .tree-branch-wrapper:focus > .tree-node {
+  border-left: 2px solid var(--secondary);
+}
+.directory .tree .tree-node--selected {
+  background: var(--bg-secondary);
+}
+.directory .tree-node__branch {
+  display: block;
+}
+.directory .icon {
+  vertical-align: middle;
+  padding-right: 5px;
+}
+.directory .icon-folder {
+  color: #e8a87c;
+}
+
+/* repl/App.css */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+:root {
+  --bg-primary: #FFF;
+  --bg-secondary: #EEE;
+  --bg-dark: #AAA;
+  --primary: #111;
+  --secondary: #777;
+  --disabled: #AAA;
+}
+.repl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 100vw;
+  height: 100vh;
+}
+.editor {
+  grid-row: 1 / 5;
+  grid-column: 1;
+  overflow: auto;
+  border-style: solid;
+  border-color: var(--bg-secondary);
+  border-width: 0px 2px 2px 0px;
+  padding-top: 5px;
+}
+.term {
+  grid-row-start: 5;
+  grid-row-end: -1;
+  grid-column: 1;
+  border-style: solid;
+  background-color: var(--bg-primary);
+  border-color: var(--bg-secondary);
+  border-width: 2px 2px 0px 0px;
+  overflow: hidden;
+  padding: 0px 5px;
+}
+.editor[style*="display: none"] ~ .term {
+  grid-row-start: 1;
+}
+.files {
+  grid-row: 1 / 3;
+  grid-column: 2;
+  border-style: solid;
+  border-color: var(--bg-secondary);
+  border-width: 0px 0px 2px 2px;
+  overflow: auto;
+  padding: 5px 0;
+}
+.plot {
+  grid-row: 3 / -1;
+  grid-column: 2;
+  border-style: solid;
+  border-color: var(--bg-secondary);
+  border-width: 2px 0px 0px 2px;
+  overflow: hidden;
+}
+/*! Bundled license information:
+
+xterm/css/xterm.css:
+  (**
+   * Copyright (c) 2014 The xterm.js authors. All rights reserved.
+   * Copyright (c) 2012-2013, Christopher Jeffrey (MIT License)
+   * https://github.com/chjj/term.js
+   * @license MIT
+   *
+   * Permission is hereby granted, free of charge, to any person obtaining a copy
+   * of this software and associated documentation files (the "Software"), to deal
+   * in the Software without restriction, including without limitation the rights
+   * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   * copies of the Software, and to permit persons to whom the Software is
+   * furnished to do so, subject to the following conditions:
+   *
+   * The above copyright notice and this permission notice shall be included in
+   * all copies or substantial portions of the Software.
+   *
+   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+   * THE SOFTWARE.
+   *
+   * Originally forked from (with the author's permission):
+   *   Fabrice Bellard's javascript vt100 for jslinux:
+   *   http://bellard.org/jslinux/
+   *   Copyright (c) 2011 Fabrice Bellard
+   *   The original design remains. The terminal itself
+   *   has been extended to include xterm CSI codes, among
+   *   other features.
+   *)
+*/
+/*# sourceMappingURL=repl.css.map */
