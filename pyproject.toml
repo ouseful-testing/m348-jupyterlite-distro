@@ -1,7 +1,7 @@
 [project]
 name = "my-web-app"
 version = "0.1.0"
-dependencies = ["flask==2.2.5", "Werkzeug==2.2.3"]
+dependencies = ["flask==2.2.5", "Werkzeug==2.2.3", "flask-cors"]
 
 [build-system]
 requires = ["hatchling"]
