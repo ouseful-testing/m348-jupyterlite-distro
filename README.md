@@ -32,3 +32,24 @@ shared_data = read.csv(shared_url(DESKTOP_HOMEDIR_DATA_FILE))
 
 head(shared_data)
 ```
+
+We could also monkey patch `read.csv()`:
+
+```R
+# Save the original read.csv function
+original_read_csv <- read.csv
+
+# Monkey patch read.csv
+read.csv <- function(file, ...) {
+  # Convert file path using shared_url
+  file <- shared_url(file)
+  
+  # Call the original read.csv function with the modified file path
+  original_read_csv(file, ...)
+}
+
+# Test the patched read.csv
+DESKTOP_HOMEDIR_DATA_FILE <- "EMA/data/testdata.csv"
+shared_data <- read.csv(DESKTOP_HOMEDIR_DATA_FILE)
+
+```
