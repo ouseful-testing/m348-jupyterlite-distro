@@ -8,9 +8,13 @@ The JupyterLite distribution should be placed in the `static` directory. The dis
 The web app also serves files from the `M348-24J` directory, so we can load datafiles in:
 
 ```R
-shared_url = function (filename) {
-    PORTNUMBER <- if (exists("PORTNUMBER")) PORTNUMBER else 8348
-    paste0("http://localhost:",PORTNUMBER,"/share/",filename)
+shared_url <- function(filename, portnumber = NULL) {
+  # Use the portnumber passed to the function, if provided, 
+  # otherwise check if PORTNUMBER exists in the environment.
+  # If neither is provided, default to 8348.
+  portnumber <- if (!is.null(portnumber)) portnumber else if (exists("PORTNUMBER")) PORTNUMBER else 8348
+  
+  paste0("http://localhost:", portnumber, "/share/", filename)
 }
 
 # The server also serves files from the "M348-24J"
