@@ -6,10 +6,24 @@ MD5sum: d4989b8322bf58465e83922e3b7d6283
 NeedsCompilation: no
 
 Package: M348
-Version: 1.3.4
+Version: 1.3.6
+Depends: R (>= 2.10), M348core, M348lite
+License: GPL-3
+MD5sum: 8637b7705c08c8309bb08bed8b5ec04f
+NeedsCompilation: no
+
+Package: M348core
+Version: 1.3.6
 Depends: R (>= 3.5.0)
 License: GPL-3
-MD5sum: e578ef6b12517cbddb882187022fda39
+MD5sum: 982aacaa0de2be81ed85c2d2947f5e84
+NeedsCompilation: no
+
+Package: M348lite
+Version: 1.3.6.2
+Depends: R (>= 3.5.0)
+License: GPL-3
+MD5sum: 82c6b156bbda931a39c4fcd76649e5cc
 NeedsCompilation: no
 
 Package: MASS
@@ -27,7 +41,7 @@ Version: 1.0.13
 Imports: methods, utils
 Suggests: tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)
 License: GPL (>= 2)
-MD5sum: 4d071fdccfb4bba67cfb4ec6e137af1b
+MD5sum: 70e7ea985f317835ea0a80867b79c7d3
 NeedsCompilation: yes
 
 Package: Rdpack
@@ -36,7 +50,7 @@ Depends: R (>= 2.15.0), methods
 Imports: tools, utils, rbibutils (>= 1.3)
 Suggests: grDevices, testthat, rstudioapi, rprojroot, gbRd
 License: GPL (>= 2)
-MD5sum: 52c26ef4564ee8ad3fc599bc7701b06f
+MD5sum: bfaf0623eef2f20107bf81739c2c6a94
 NeedsCompilation: no
 
 Package: TTR
@@ -82,7 +96,7 @@ Version: 1.14
 Depends: R (>= 3.2.3)
 Suggests: rstudioapi, shiny, testit, rmarkdown, knitr
 License: GPL
-MD5sum: c9b3747d97d3081915c4b63289e027cb
+MD5sum: e4cc9ac19c7d3e3369f31f4945d989a6
 NeedsCompilation: no
 
 Package: generics
@@ -91,15 +105,15 @@ Depends: R (>= 3.2)
 Imports: methods
 Suggests: covr, pkgload, testthat (>= 3.0.0), tibble, withr
 License: MIT + file LICENSE
-MD5sum: 46db18a43ade2affdd698ea8adc342d1
+MD5sum: 0b084f91f27dc23c2d9426d36f2bb4b4
 NeedsCompilation: no
 
 Package: jsonlite
-Version: 1.8.8
+Version: 1.8.9
 Depends: methods
 Suggests: httr, vctrs, testthat, knitr, rmarkdown, R.rsp, sf
 License: MIT + file LICENSE
-MD5sum: 9411e45a50bb1809d5f0ed4e3fa9cbb2
+MD5sum: 5d13c3056a5b106eb93a4372087d217c
 NeedsCompilation: yes
 
 Package: lattice
@@ -162,12 +176,12 @@ MD5sum: ed93b3c59bb31c90c7bececc51df99c7
 NeedsCompilation: no
 
 Package: rbibutils
-Version: 2.2.16
+Version: 2.3
 Depends: R (>= 2.10)
 Imports: utils, tools
 Suggests: testthat
 License: GPL-2
-MD5sum: 5c60ee2debfc6beffd07647677376458
+MD5sum: e14d26b87c72fc4c2225efd121e75e72
 NeedsCompilation: yes
 
 Package: sandwich
@@ -190,13 +204,13 @@ MD5sum: 9a358516f229fee84928ad47c21a1361
 NeedsCompilation: yes
 
 Package: xts
-Version: 0.14.0
+Version: 0.14.1
 Depends: R (>= 3.6.0), zoo (>= 1.7-12)
 Imports: methods
 LinkingTo: zoo
 Suggests: timeSeries, timeDate, tseries, chron, tinytest
 License: GPL (>= 2)
-MD5sum: 8c4cd53c2a087347045bb3ae8ab3d7e9
+MD5sum: 7da8a2ae9cca6d6c8f540b1d6fe3603a
 NeedsCompilation: yes
 
 Package: zoo
