@@ -10,7 +10,7 @@
       {
         "extension": "./extension",
         "liteExtension": true,
-        "load": "static/remoteEntry.26d08a103ba745fd5c80.js",
+        "load": "static/remoteEntry.cc6da95cfedf535c8b89.js",
         "name": "@jupyterlite/pyodide-kernel-extension"
       },
       {
@@ -32,13 +32,6 @@
         "liteExtension": false,
         "load": "static/remoteEntry.ffa5f565ff781bbfab6e.js",
         "name": "jupyterlab-filesystem-access",
-        "style": "./style"
-      },
-      {
-        "extension": "./extension",
-        "liteExtension": false,
-        "load": "static/remoteEntry.6e5b4293f31361324af2.js",
-        "name": "jupyterlab-myst",
         "style": "./style"
       },
       {
@@ -356,7 +349,7 @@
     "litePluginSettings": {
       "@jupyterlite/pyodide-kernel-extension:kernel": {
         "pipliteUrls": [
-          "./extensions/@jupyterlite/pyodide-kernel-extension/static/pypi/all.json?sha256=51497228ca9f94ef6de188830c651a1a05ff23b0ceb39cda94625cf99aa82539"
+          "./extensions/@jupyterlite/pyodide-kernel-extension/static/pypi/all.json?sha256=957538a5b828832aeaa75abd6b1310f6f4a0673bcbc1f4ad3a52e35c2f7e0d4d"
         ]
       }
     },

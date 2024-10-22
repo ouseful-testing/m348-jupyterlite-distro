@@ -5,19 +5,19 @@
         {
           "comment_text": "",
           "digests": {
-            "md5": "5f91018a6c5cde77b8ae2521cc2f78b4",
-            "sha256": "9525bc401a9257575e3564669404a0680276bb961538a3242bc191e35d7e2c75"
+            "md5": "337bacb9ba17ddc4238374ab85cf3313",
+            "sha256": "37e3953a20ed558fae3951c8db3acd626de454b0629ae451317182ec8c62a7b8"
           },
           "downloads": -1,
           "filename": "ipykernel-6.9.2-py3-none-any.whl",
           "has_sig": false,
-          "md5_digest": "5f91018a6c5cde77b8ae2521cc2f78b4",
+          "md5_digest": "337bacb9ba17ddc4238374ab85cf3313",
           "packagetype": "bdist_wheel",
           "python_version": "py3",
           "requires_python": ">=3.10",
           "size": 2731,
-          "upload_time": "2024-09-03T08:29:30.141935Z",
-          "upload_time_iso_8601": "2024-09-03T08:29:30.141935Z",
+          "upload_time": "2024-10-21T12:42:50.413450Z",
+          "upload_time_iso_8601": "2024-10-21T12:42:50.413450Z",
           "url": "./ipykernel-6.9.2-py3-none-any.whl",
           "yanked": false,
           "yanked_reason": null
@@ -27,24 +27,24 @@
   },
   "piplite": {
     "releases": {
-      "0.4.2": [
+      "0.4.3": [
         {
           "comment_text": "",
           "digests": {
-            "md5": "edff988393a9a2e5acd89cca9122a86b",
-            "sha256": "e508c140070243c175173ae64f8dda2d150276ea8fbdfd4f0af58c884fa0b30c"
+            "md5": "0147712b461d1ed259754813d7d0d8be",
+            "sha256": "564c30e8b6fe1e5f8077a3b0aadb8f782f57de4395c1bc65b0e409fc53319754"
           },
           "downloads": -1,
-          "filename": "piplite-0.4.2-py3-none-any.whl",
+          "filename": "piplite-0.4.3-py3-none-any.whl",
           "has_sig": false,
-          "md5_digest": "edff988393a9a2e5acd89cca9122a86b",
+          "md5_digest": "0147712b461d1ed259754813d7d0d8be",
           "packagetype": "bdist_wheel",
           "python_version": "py3",
           "requires_python": "<3.12,>=3.11",
           "size": 7168,
-          "upload_time": "2024-09-03T08:29:30.141935Z",
-          "upload_time_iso_8601": "2024-09-03T08:29:30.141935Z",
-          "url": "./piplite-0.4.2-py3-none-any.whl",
+          "upload_time": "2024-10-21T12:42:50.413450Z",
+          "upload_time_iso_8601": "2024-10-21T12:42:50.413450Z",
+          "url": "./piplite-0.4.3-py3-none-any.whl",
           "yanked": false,
           "yanked_reason": null
         }
@@ -53,24 +53,24 @@
   },
   "pyodide-kernel": {
     "releases": {
-      "0.4.2": [
+      "0.4.3": [
         {
           "comment_text": "",
           "digests": {
-            "md5": "5a8eb5ce00fe93d916afe21d0efc57cd",
-            "sha256": "6dd6f1d5124a77fa973b503cff9d8b0154c193022d2c5bd1d294fe2c1b39515c"
+            "md5": "59b14dedac8b54470703c5598cdf606c",
+            "sha256": "0c9a83ff55ebeaef979a7bf33ded3265c51a4a2d5baa47ef79bbb83a53013426"
           },
           "downloads": -1,
-          "filename": "pyodide_kernel-0.4.2-py3-none-any.whl",
+          "filename": "pyodide_kernel-0.4.3-py3-none-any.whl",
           "has_sig": false,
-          "md5_digest": "5a8eb5ce00fe93d916afe21d0efc57cd",
+          "md5_digest": "59b14dedac8b54470703c5598cdf606c",
           "packagetype": "bdist_wheel",
           "python_version": "py3",
           "requires_python": "<3.12,>=3.11",
           "size": 11007,
-          "upload_time": "2024-09-03T08:29:30.141935Z",
-          "upload_time_iso_8601": "2024-09-03T08:29:30.141935Z",
-          "url": "./pyodide_kernel-0.4.2-py3-none-any.whl",
+          "upload_time": "2024-10-21T12:42:50.413450Z",
+          "upload_time_iso_8601": "2024-10-21T12:42:50.413450Z",
+          "url": "./pyodide_kernel-0.4.3-py3-none-any.whl",
           "yanked": false,
           "yanked_reason": null
         }
@@ -83,19 +83,19 @@
         {
           "comment_text": "",
           "digests": {
-            "md5": "1b330bab5251a8c4b365eb4e73c7607d",
-            "sha256": "be7680deb1282135a439ab443248b49e053256477dec14ee71ad8f485bfe2e59"
+            "md5": "43f79ddc62cbc6ba85a16317e9011a58",
+            "sha256": "962113f5d9207641ace9cbf2b5f044c246054c51569724a23d2b5456760d2cf7"
           },
           "downloads": -1,
           "filename": "widgetsnbextension-3.6.999-py3-none-any.whl",
           "has_sig": false,
-          "md5_digest": "1b330bab5251a8c4b365eb4e73c7607d",
+          "md5_digest": "43f79ddc62cbc6ba85a16317e9011a58",
           "packagetype": "bdist_wheel",
           "python_version": "py3",
           "requires_python": "<3.12,>=3.11",
           "size": 2367,
-          "upload_time": "2024-09-03T08:29:30.141935Z",
-          "upload_time_iso_8601": "2024-09-03T08:29:30.141935Z",
+          "upload_time": "2024-10-21T12:42:50.413450Z",
+          "upload_time_iso_8601": "2024-10-21T12:42:50.413450Z",
           "url": "./widgetsnbextension-3.6.999-py3-none-any.whl",
           "yanked": false,
           "yanked_reason": null
@@ -105,19 +105,19 @@
         {
           "comment_text": "",
           "digests": {
-            "md5": "a924de0092ef40fe93fd4464d35e5be2",
-            "sha256": "9d88fa0e2e496413454a4bc215d2af9f0c33612ce6bb459bd1a61f4eec59358c"
+            "md5": "b588f53d97ef5f08a01599d839665dca",
+            "sha256": "c956526660f694e4129a697a265d07b70243878ee390dedc047463ce786a0586"
           },
           "downloads": -1,
           "filename": "widgetsnbextension-4.0.999-py3-none-any.whl",
           "has_sig": false,
-          "md5_digest": "a924de0092ef40fe93fd4464d35e5be2",
+          "md5_digest": "b588f53d97ef5f08a01599d839665dca",
           "packagetype": "bdist_wheel",
           "python_version": "py3",
           "requires_python": "<3.12,>=3.11",
           "size": 2369,
-          "upload_time": "2024-09-03T08:29:30.141935Z",
-          "upload_time_iso_8601": "2024-09-03T08:29:30.141935Z",
+          "upload_time": "2024-10-21T12:42:50.413450Z",
+          "upload_time_iso_8601": "2024-10-21T12:42:50.413450Z",
           "url": "./widgetsnbextension-4.0.999-py3-none-any.whl",
           "yanked": false,
           "yanked_reason": null

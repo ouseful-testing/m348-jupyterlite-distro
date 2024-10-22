@@ -7,6 +7,8 @@ import os
 from pathlib import Path
 import logging
 
+DEFAULT_PORT = 8348
+
 app = Flask(__name__)
 
 console = Console()
@@ -89,9 +91,19 @@ if __name__ == "__main__":
     # Prompt the user for a port number
     while True:
         try:
-            port = int(input("Enter the port number to run the server on (e.g. 8348, or 0 for dynamic allocation): "))
+            user_input = input(
+                f"Enter the port number to run the server on (default: {DEFAULT_PORT}, or 0 for dynamic allocation): "
+            )
+
+            if user_input == "":
+                port = DEFAULT_PORT
+            else:
+                port = int(user_input)
+            # port = int(input("Enter the port number to run the server on (e.g. 8348, or 0 for dynamic allocation): "))
             if 1024 <= port <= 65535 or port==0:
                 console.print("Use the http:127.0.0.1 or http://localhost address in your browser", style="green")
+                if port == 0:
+                    console.print(f"In each notebook, you MUST set PORTNUMBER to the dynamically allocated value")
                 break
             else:
                 console.print("Port number must be between 1024 and 65535. Please try again.")
