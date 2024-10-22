@@ -20,47 +20,20 @@ USER_MODULE_DIR = os.path.join(USER_HOME_DIR, f"{MODULE_CODE}-{MODULE_PRESENTATI
 
 console = Console()
 
-try:
-    # Check if the directory exists, if not, create it
-    if not os.path.exists(USER_MODULE_DIR):
-        os.makedirs(USER_MODULE_DIR)
-        console.print(f"Shared directory created: {USER_MODULE_DIR}\n")
-    else:
-        console.print(f"Shared directory already exists: {USER_MODULE_DIR}")
-except:
-    console.print(
-        f"Unable to find or create directory {USER_MODULE_DIR}. You will need to create this directory yourself"
-    )
-
-console.print(
-        "You should place any data files you want to access from notebooks in this shared direcctory."
-    )
-
-data = [
-        ["Column1", "Column2"],  # Header row
-        ["Row1Data1", "Row1Data2"],  # First data row
-        ["Row2Data1", "Row2Data2"],  # Second data row
-    ]
-try:
-    # Writing CSV to the file
-    test_csv_fn = Path(USER_MODULE_DIR) / "jl_distro_data_test.csv"
-    with open(test_csv_fn, mode="w", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerows(data)
-    console.print(f"Created test file in shared directory created: {test_csv_fn}\n")
-except:
-    console.print(Text("Failed to create test data file in shared directory.", style="red"))
-    console.print(f"For installation tests, you will need to create a simple csv file as: {test_csv_fn} ")
-
 app = Flask(__name__)
 
 # SISE use:
 # If we need to tighten this down further we can omit CORS
 CORS(app)
 
-SHARED_DIR = Path() / "Desktop" / "M348-24J"
+# Should we use ~/M348-24J or ~/Desktop/M348-24J ?
+# The latter would limit this to Windows?
+# But we could trap for that?
+SHARED_DIR = USER_MODULE_DIR
+_made_shared_dir = False
 if not os.path.exists(SHARED_DIR):
     os.makedirs(SHARED_DIR)
+    _made_shared_dir = True
 
 @app.route("/")
 def index():
@@ -90,7 +63,9 @@ def add_corp_headers(response):
 
 
 def open_browser(port):
-    url = f"http://127.0.0.1:{port}/tree"
+    # We could launch into notebook UI at /tree
+    # BUT this doesn't support the local filesystem mount?
+    url = f"http://127.0.0.1:{port}"
     webbrowser.open(url)
 
 
@@ -123,7 +98,45 @@ if __name__ == "__main__":
     header = Text("\n\nOU M348 PORTABLE JUPYTERLITE INSTALLATION\n\n", style="bold")
     console.print(header)
 
-    console.print("This application will start a simple webserver running JupyterLite.\n")
+    try:
+        # Check if the directory exists, if not, create it
+        if not os.path.exists(USER_MODULE_DIR) or not :
+            os.makedirs(USER_MODULE_DIR)
+            console.print(f"Shared directory created: {USER_MODULE_DIR}\n")
+        elif _made_shared_dir:
+            console.print(f"Shared directory created: {USER_MODULE_DIR}\n")
+        else:
+            console.print(f"Shared directory already exists: {USER_MODULE_DIR}")
+    except:
+        console.print(
+            f"Unable to find or create directory {USER_MODULE_DIR}. You will need to create this directory yourself"
+        )
+
+    console.print(
+        "You should place any data files you want to access from notebooks in this shared direcctory."
+    )
+
+    data = [
+        ["Column1", "Column2"],  # Header row
+        ["Row1Data1", "Row1Data2"],  # First data row
+        ["Row2Data1", "Row2Data2"],  # Second data row
+    ]
+    try:
+        # Writing CSV to the file
+        test_csv_fn = Path(USER_MODULE_DIR) / "jl_distro_data_test.csv"
+        with open(test_csv_fn, mode="w", newline="") as file:
+            writer = csv.writer(file)
+            writer.writerows(data)
+        console.print(f"Created test file in shared directory created: {test_csv_fn}\n")
+    except:
+        console.print(
+            Text("Failed to create test data file in shared directory.", style="red")
+        )
+        console.print(
+            f"For installation tests, you will need to create a simple csv file as: {test_csv_fn} "
+        )
+
+    console.print("The application will now start a simple webserver running JupyterLite.\n")
 
     console.print(
         "You will be prompted for a port number in the range 1024 and 65535, or 0 for dynamic port allocation.\n"
