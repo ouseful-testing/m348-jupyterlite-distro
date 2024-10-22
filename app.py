@@ -100,7 +100,7 @@ if __name__ == "__main__":
 
     try:
         # Check if the directory exists, if not, create it
-        if not os.path.exists(USER_MODULE_DIR) or not :
+        if not os.path.exists(USER_MODULE_DIR):
             os.makedirs(USER_MODULE_DIR)
             console.print(f"Shared directory created: {USER_MODULE_DIR}\n")
         elif _made_shared_dir:
