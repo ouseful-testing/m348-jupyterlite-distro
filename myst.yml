@@ -1,0 +1,11 @@
+version: 1
+project:
+  title: M348 JuplyterLite Desktop Application
+  date: October 2024
+  authors: M348 Module Team
+  toc:
+    - file: INTRO.md
+    - file: README_INSTALL.md
+    - file: README_USER.md
+  exports:
+  - format: pdf

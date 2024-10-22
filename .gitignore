@@ -3,3 +3,4 @@ app.spec
 /build
 .venv
 dist
+_build/

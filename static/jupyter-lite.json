@@ -10,13 +10,7 @@
       {
         "extension": "./extension",
         "liteExtension": true,
-        "load": "static/remoteEntry.cc6da95cfedf535c8b89.js",
-        "name": "@jupyterlite/pyodide-kernel-extension"
-      },
-      {
-        "extension": "./extension",
-        "liteExtension": true,
-        "load": "static/remoteEntry.27213568ad48ae687629.js",
+        "load": "static/remoteEntry.1ee3b7e02d4721fbe085.js",
         "name": "@r-wasm/jupyterlite-webr-kernel",
         "style": "./style"
       },
@@ -32,6 +26,13 @@
         "liteExtension": false,
         "load": "static/remoteEntry.ffa5f565ff781bbfab6e.js",
         "name": "jupyterlab-filesystem-access",
+        "style": "./style"
+      },
+      {
+        "extension": "./extension",
+        "liteExtension": false,
+        "load": "static/remoteEntry.c7a31b7a4c60a21a3aa0.js",
+        "name": "jupyterlab-open-url-parameter",
         "style": "./style"
       },
       {
@@ -346,13 +347,6 @@
     "fullLabextensionsUrl": "./extensions",
     "fullStaticUrl": "./build",
     "licensesUrl": "./lab/api/licenses",
-    "litePluginSettings": {
-      "@jupyterlite/pyodide-kernel-extension:kernel": {
-        "pipliteUrls": [
-          "./extensions/@jupyterlite/pyodide-kernel-extension/static/pypi/all.json?sha256=957538a5b828832aeaa75abd6b1310f6f4a0673bcbc1f4ad3a52e35c2f7e0d4d"
-        ]
-      }
-    },
     "settingsOverrides": {
       "@jupyterlab/codemirror-extension:plugin": {
         "defaultConfig": {

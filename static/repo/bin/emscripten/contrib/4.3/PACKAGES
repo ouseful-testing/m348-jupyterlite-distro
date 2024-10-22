@@ -2,13 +2,13 @@ Package: Formula
 Version: 1.2-5
 Depends: R (>= 2.0.0), stats
 License: GPL-2 | GPL-3
-MD5sum: d395a78ef04f6cbbcfadcbe819e3bcf8
+MD5sum: 0e2bad16586eb5e3c8c425e47d63d6c1
 
 Package: M348
-Version: 1.3.6.2
+Version: 1.3.6.3
 Depends: R (>= 2.10)
 License: GPL-3
-MD5sum: dcc1d3420dd552ebc119ab1c598db9a6
+MD5sum: 5cb73ccc9e8fc913f6ad7bc12213817d
 
 Package: MASS
 Version: 7.3-58.3
@@ -17,14 +17,14 @@ Depends: R (>= 3.3.0), grDevices, graphics, stats, utils
 Imports: methods
 Suggests: lattice, nlme, nnet, survival
 License: GPL-2 | GPL-3
-MD5sum: c0d67d868557488a14373f9f5bc60cd1
+MD5sum: 2abc1501662783f21ae5e5e6be54cbca
 
 Package: Rcpp
 Version: 1.0.13
 Imports: methods, utils
 Suggests: tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)
 License: GPL (>= 2)
-MD5sum: 0eb57b23ad91733710de9cbfc13652a5
+MD5sum: 25840094fb4b0670b095aebab78ce4e9
 
 Package: Rdpack
 Version: 2.6.1
@@ -32,7 +32,7 @@ Depends: R (>= 2.15.0), methods
 Imports: tools, utils, rbibutils (>= 1.3)
 Suggests: grDevices, testthat, rstudioapi, rprojroot, gbRd
 License: GPL (>= 2)
-MD5sum: d10debace6187e1353a0729633c933b7
+MD5sum: 0ff983e10b7ac1e160c06d90be352809
 
 Package: TTR
 Version: 0.24.4
@@ -41,13 +41,13 @@ LinkingTo: xts
 Suggests: RUnit
 Enhances: quantmod
 License: GPL (>= 2)
-MD5sum: 2a9b23f8805cd217de7939ef1307c802
+MD5sum: a54021996751495cc0111c197b8f5a74
 
 Package: bdsmatrix
 Version: 1.3-7
 Depends: methods, R (>= 2.0.0)
 License: LGPL-2
-MD5sum: b293529ae62b2c2dfcdb0acd6d8ace03
+MD5sum: 0e3645e9835c4f34fb35932e6efb2f4d
 
 Package: collapse
 Version: 2.0.16
@@ -58,7 +58,7 @@ Suggests: fastverse, data.table, magrittr, kit, xts, zoo, plm, fixest,
         vars, RcppArmadillo, RcppEigen, tibble, dplyr, ggplot2, scales,
         microbenchmark, testthat, covr, knitr, rmarkdown, withr
 License: GPL (>= 2) | file LICENSE
-MD5sum: 219b243d288ac56b0cbb1add6512a6fb
+MD5sum: 99735a051407aa7be4a0589b8b004578
 
 Package: digest
 Version: 0.6.37
@@ -66,14 +66,14 @@ Depends: R (>= 3.3.0)
 Imports: utils
 Suggests: tinytest, simplermarkdown
 License: GPL (>= 2)
-MD5sum: 8765aca1f9253b0b76fbfdfa10b85d55
+MD5sum: 4f82a2153e0800fc116007940f09cb58
 
 Package: formatR
 Version: 1.14
 Depends: R (>= 3.2.3)
 Suggests: rstudioapi, shiny, testit, rmarkdown, knitr
 License: GPL
-MD5sum: 5ed069095dae33d2d94aadbf7308e1ff
+MD5sum: b9dddf677579293b3c83d7b62eefc7f7
 
 Package: generics
 Version: 0.1.3
@@ -81,14 +81,14 @@ Depends: R (>= 3.2)
 Imports: methods
 Suggests: covr, pkgload, testthat (>= 3.0.0), tibble, withr
 License: MIT + file LICENSE
-MD5sum: d1a865d9255b3d8e09ad187c9ece09fb
+MD5sum: d9049e37547a5d6c90c9bbf9aaad33c5
 
 Package: jsonlite
 Version: 1.8.9
 Depends: methods
 Suggests: httr, vctrs, testthat, knitr, rmarkdown, R.rsp, sf
 License: MIT + file LICENSE
-MD5sum: a49a622ac016f8a567f9c5f0b3d448ad
+MD5sum: 76be0f8d4ff04cf0b1e9e37d79be3adf
 
 Package: lattice
 Version: 0.22-6
@@ -98,7 +98,7 @@ Imports: grid, grDevices, graphics, stats, utils
 Suggests: KernSmooth, MASS, latticeExtra, colorspace
 Enhances: chron, zoo
 License: GPL (>= 2)
-MD5sum: c4f7486b7eae9514bd0f97e095b9d46b
+MD5sum: 5200bf0f287761ad0ecc7190561c2cd8
 
 Package: lmtest
 Version: 0.9-40
@@ -106,7 +106,7 @@ Depends: R (>= 3.0.0), stats, zoo
 Imports: graphics
 Suggests: car, strucchange, sandwich, dynlm, stats4, survival, AER
 License: GPL-2 | GPL-3
-MD5sum: f06a6a0914a4f1a4fcb90c73d88e6c14
+MD5sum: 382727e5cb71b37d777979f3a0349be1
 
 Package: maxLik
 Version: 1.5-2.1
@@ -114,7 +114,7 @@ Depends: R (>= 2.4.0), miscTools (>= 0.6-8), methods
 Imports: sandwich, generics
 Suggests: MASS, clue, dlm, plot3D, tibble, tinytest
 License: GPL (>= 2)
-MD5sum: 5fe4de6efb14da01b6501cf3e8c95305
+MD5sum: cac5c33624803a954f276feeb46da3ba
 
 Package: miscTools
 Version: 0.6-28
@@ -122,7 +122,7 @@ Depends: R (>= 2.14.0)
 Imports: digest
 Suggests: Ecdat (>= 0.1-5)
 License: GPL (>= 2)
-MD5sum: 6d18b6556a75bd66d49d9d93a245b6f8
+MD5sum: 7d6e66429afe31d8c68136ae1de92115
 
 Package: nlme
 Version: 3.1-166
@@ -131,7 +131,7 @@ Depends: R (>= 3.6.0)
 Imports: graphics, stats, utils, lattice
 Suggests: MASS, SASmixed
 License: GPL (>= 2)
-MD5sum: 9bab51c78bbf44b3a78636628a86ec44
+MD5sum: a573bc61ecbf0cf0fdb310ce0e439166
 
 Package: plm
 Version: 2.6-4
@@ -141,7 +141,7 @@ Imports: MASS, bdsmatrix, collapse (>= 1.8.9), zoo, nlme, sandwich,
 Suggests: AER, car, statmod, urca, pder, texreg, knitr, rmarkdown,
         fixest, lfe
 License: GPL (>= 2)
-MD5sum: 43cb28c35c645f281ea763e536ea438c
+MD5sum: f70ea585e004e55bf64169fd652a4bcd
 
 Package: rbibutils
 Version: 2.3
@@ -149,7 +149,7 @@ Depends: R (>= 2.10)
 Imports: utils, tools
 Suggests: testthat
 License: GPL-2
-MD5sum: aad9bf1df7bfd544e66dc608dc7801ae
+MD5sum: 2baf13da12f6564b92fc84f9f74b1c88
 
 Package: sandwich
 Version: 3.1-1
@@ -159,14 +159,14 @@ Suggests: AER, car, geepack, lattice, lme4, lmtest, MASS, multiwayvcov,
         parallel, pcse, plm, pscl, scatterplot3d, stats4, strucchange,
         survival
 License: GPL-2 | GPL-3
-MD5sum: 24b26ec89475f00d1669fef65de22897
+MD5sum: 7f4277b63504b3dbc17266d85e8eb09b
 
 Package: urca
 Version: 1.3-4
 Depends: R (>= 2.0.0), methods
 Imports: nlme, graphics, stats
 License: GPL (>= 2)
-MD5sum: 703b318fcc631e7a1052db2c3064983d
+MD5sum: c02c756f10f7bde293a7ee9e31d10fa6
 
 Package: xts
 Version: 0.14.1
@@ -175,7 +175,7 @@ Imports: methods
 LinkingTo: zoo
 Suggests: timeSeries, timeDate, tseries, chron, tinytest
 License: GPL (>= 2)
-MD5sum: 53182983e80ecd7e4e542694cc3b4b80
+MD5sum: d3d2e1df00574ad0b902e259340f2aa6
 
 Package: zoo
 Version: 1.8-12
@@ -184,4 +184,4 @@ Imports: utils, graphics, grDevices, lattice (>= 0.20-27)
 Suggests: AER, coda, chron, ggplot2 (>= 3.0.0), mondate, scales,
         stinepack, strucchange, timeDate, timeSeries, tis, tseries, xts
 License: GPL-2 | GPL-3
-MD5sum: 1acb6c6f0a7eb0aeda7bf5c148f2635a
+MD5sum: 0ce7346505ff66b6054a7fbb62cf1292
