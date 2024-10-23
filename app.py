@@ -172,8 +172,7 @@ if __name__ == "__main__":
                 if port == 0:
                     port = find_free_port()
                 console.print(
-                    "Use the address http://127.0.0.1:{port} or http://localhost{port} in your browser",
-                    style="none link.url=bright_green",
+                    f"Use the address [bright_green]http://127.0.0.1:{port}[/bright_green] or [bright_green]http://localhost:{port}[/bright_green] in your browser"
                 )
                 break
             else:
@@ -182,7 +181,7 @@ if __name__ == "__main__":
             console.print("Invalid input. Please enter a valid port number.", style="red")
 
     threading.Thread(target=open_browser, args=(port,), daemon=True).start()
-    
+
     # Open the browser in a separate thread
     # Run the Flask app on the specified port
     app.run(host="0.0.0.0", port=port)
