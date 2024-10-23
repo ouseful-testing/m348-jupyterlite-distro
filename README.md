@@ -1,7 +1,18 @@
 # m348-jupyterlite-distro
-Builder for pyinstaller distributions - flask + jupyterlite bundle exe
+
+Builder for a JuopyterLite Desktop application / pyinstaller distribution. Uses: flask + jupyterlite bundle, ships an exe
 
 Based on: `pyinstaller --onefile --add-data "static:static" --name m348-jupyterlite app.py`
+
+## Preparing This Repository
+
+The repo actions builds the distribution around JupyterLite distribution placed in the `./static` directory.
+
+The JupyterLite distribution is built using an action in https://github.com/ouseful-testing/jupyterlite-webr-kernel which constructs a custom web Jupyterlite kernel and then creates a JupyterLite distribution that makes use of it.
+
+The `jupyterlite-webr-kernel` builds a self-contained web distribution with package and webr files distributed alongside the jupyterlite environment; the R packages are currently custom built in the https://github.com/ouseful-testing/webr-package-repo-demo repo and then placed in the `webr-package-repo-demo` repo `packages_wasmbuilt` directory.
+
+## Generating the JupyterLite Desktop application
 
 The JupyterLite distribution should be placed in the `static` directory. The distribution can be built using https://github.com/ouseful-testing/jupyterlite-webr-kernel/tree/th-custom-path (the files are available as an artefact uploaded by the build action).
 
