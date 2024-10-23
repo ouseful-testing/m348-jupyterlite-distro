@@ -1,5 +1,6 @@
 from rich.console import Console
 from rich.text import Text
+# colors: https://rich.readthedocs.io/en/stable/appendix/colors.html
 
 from flask import Flask, send_from_directory, request
 from flask_cors import CORS
@@ -7,6 +8,7 @@ import os
 from pathlib import Path
 import logging
 import csv
+import socket
 
 MODULE_CODE = "M348"
 MODULE_PRESENTATION = "24J"
@@ -34,6 +36,14 @@ _made_shared_dir = False
 if not os.path.exists(SHARED_DIR):
     os.makedirs(SHARED_DIR)
     _made_shared_dir = True
+
+def find_free_port():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind(("", 0))  # Bind to port 0 lets OS assign a free port
+        s.listen(1)
+        port = s.getsockname()[1]  # Get the assigned port number
+        return port
+
 
 @app.route("/")
 def index():
@@ -159,23 +169,20 @@ if __name__ == "__main__":
                 port = int(user_input)
             # port = int(input("Enter the port number to run the server on (e.g. 8348, or 0 for dynamic allocation): "))
             if 1024 <= port <= 65535 or port==0:
-                if port != 0:
-                    console.print("Use the address http://127.0.0.1:{port} or http://localhost{port} in your browser")
-                else:
-                    console.print(
-                        f"Use the address http://127.0.0.1:ALLOCATED_PORTNUMBER or http://localhost:ALLOCATED_PORTNUMBER in your browser",
-                        style="none",
-                    )
-                    console.print(f"In each notebook, you MUST also set PORTNUMBER to the dynamically allocated value")
+                if port == 0:
+                    port = find_free_port()
+                console.print(
+                    "Use the address http://127.0.0.1:{port} or http://localhost{port} in your browser",
+                    style="none link.url=bright_green",
+                )
                 break
             else:
-                console.print("Port number must be between 1024 and 65535. Please try again.")
+                console.print("Port number must be between 1024 and 65535, or 0. Please try again.")
         except ValueError:
             console.print("Invalid input. Please enter a valid port number.", style="red")
 
+    threading.Thread(target=open_browser, args=(port,), daemon=True).start()
+    
     # Open the browser in a separate thread
-    if port!=0:
-        threading.Thread(target=open_browser, args=(port,), daemon=True).start()
-
     # Run the Flask app on the specified port
     app.run(host="0.0.0.0", port=port)
