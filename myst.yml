@@ -1,11 +1,15 @@
 version: 1
 project:
-  title: M348 JuplyterLite Desktop Application
-  date: October 2024
-  authors: M348 Module Team
+  title: M348 JupyterLite Desktop Application
+  date: 2024-10-23
+  authors:
+    - name: M348 Module Team
+      affiliations: The Open University
   toc:
+    - file: DUMMY_ROOT.md
     - file: INTRO.md
     - file: README_INSTALL.md
     - file: README_USER.md
   exports:
-  - format: pdf
+  - template: plain_latex_book
+  #- output: M348-JupyterLite-Desktop-Guide.pdf

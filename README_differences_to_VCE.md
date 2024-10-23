@@ -1,6 +1,6 @@
 # README — Differences to M348 VCE
 
-The M348 JuptyerLite desktop application uses the same user interface (JupyterLab) and same R programming language environment as the M348 environment delivered via the hosted Open Computing Lab virtual comoputing environment (VCE) service and local VCE application. 
+The *M348 JuptyerLite desktop application* uses the same user interface (JupyterLab) and same R programming language environment as the M348 environment delivered via the hosted Open Computing Lab virtual comoputing environment (VCE) service and local VCE application.
 
 The main differences are:
 

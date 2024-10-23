@@ -1,6 +1,6 @@
 # m348-jupyterlite-distro
 
-Builder for a JuopyterLite Desktop application / pyinstaller distribution. Uses: flask + jupyterlite bundle, ships an exe
+Builder for a JupyterLite Desktop application / pyinstaller distribution. Uses: flask + jupyterlite bundle, ships an exe
 
 Based on: `pyinstaller --onefile --add-data "static:static" --name m348-jupyterlite app.py`
 
