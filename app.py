@@ -165,7 +165,7 @@ if __name__ == "__main__":
 
             if user_input == "":
                 console.print(
-                    f"\nOkay... Using the default port (8348).\n"
+                    f"\nOkay... Using the default port ({DEFAULT_PORT}).\n"
                 )
                 port = DEFAULT_PORT
             else:
@@ -178,8 +178,8 @@ if __name__ == "__main__":
                         f"\nOkay... You chose 0, so looking for an unallocated port...\n"
                     )
                     port = find_free_port()
-                else:
-                    console.print(f"\nOkay... Using port {port} .\n")
+                elif port != DEFAULT_PORT:
+                    console.print(f"\nOkay... Using port {port}.\n")
                 console.print(
                     f"\nThe environment should be published at the address [bright_green]http://127.0.0.1:{port}[/bright_green] or [bright_green]http://localhost:{port}[/bright_green] in your browser."
                 )
