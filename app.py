@@ -172,7 +172,7 @@ if __name__ == "__main__":
                 if port == 0:
                     port = find_free_port()
                 console.print(
-                    f"Use the address [bright_green]http://127.0.0.1:{port}[/bright_green] or [bright_green]http://localhost:{port}[/bright_green] in your browser"
+                    f"The environment should be published at the address [bright_green]http://127.0.0.1:{port}[/bright_green] or [bright_green]http://localhost:{port}[/bright_green] in your browser."
                 )
                 break
             else:
@@ -180,8 +180,10 @@ if __name__ == "__main__":
         except ValueError:
             console.print("Invalid input. Please enter a valid port number.", style="red")
 
-    threading.Thread(target=open_browser, args=(port,), daemon=True).start()
+    input("Press Enter to start the server and attempt to launch a browser...")
 
+    threading.Thread(target=open_browser, args=(port,), daemon=True).start()
+    
     # Open the browser in a separate thread
     # Run the Flask app on the specified port
     app.run(host="0.0.0.0", port=port)
