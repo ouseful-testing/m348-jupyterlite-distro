@@ -164,26 +164,35 @@ if __name__ == "__main__":
             )
 
             if user_input == "":
+                console.print(
+                    f"\nOkay... Using the default port (8348).\n"
+                )
                 port = DEFAULT_PORT
             else:
                 port = int(user_input)
+
             # port = int(input("Enter the port number to run the server on (e.g. 8348, or 0 for dynamic allocation): "))
             if 1024 <= port <= 65535 or port==0:
                 if port == 0:
+                    console.print(
+                        f"\nOkay... You chose 0, so looking for an unallocated port...\n"
+                    )
                     port = find_free_port()
+                else:
+                    console.print(f"\nOkay... Using port {port} .\n")
                 console.print(
-                    f"The environment should be published at the address [bright_green]http://127.0.0.1:{port}[/bright_green] or [bright_green]http://localhost:{port}[/bright_green] in your browser."
+                    f"\nThe environment should be published at the address [bright_green]http://127.0.0.1:{port}[/bright_green] or [bright_green]http://localhost:{port}[/bright_green] in your browser."
                 )
                 break
             else:
-                console.print("Port number must be between 1024 and 65535, or 0. Please try again.")
+                console.print("\nPort number must be between 1024 and 65535, or 0. Please try again.\n")
         except ValueError:
-            console.print("Invalid input. Please enter a valid port number.", style="red")
+            console.print("\nInvalid input. Please enter a valid port number.\n", style="red")
 
-    input("Press Enter to start the server and attempt to launch a browser...")
+    input("\nPress Enter to start the server and attempt to launch a browser...")
 
     threading.Thread(target=open_browser, args=(port,), daemon=True).start()
-    
+
     # Open the browser in a separate thread
     # Run the Flask app on the specified port
     app.run(host="0.0.0.0", port=port)
