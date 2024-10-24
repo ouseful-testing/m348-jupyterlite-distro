@@ -115,6 +115,27 @@ var _WebRKernel_webRConsole, _WebRKernel_bitmapCanvas, _WebRKernel_lastPlot;
 const webRVersion = "0.3.0";
 const baseRVersion = "4.3.3";
 const protocolVersion = "5.3";
+function getFormattedUrl(url = window.location.href) {
+    try {
+        const urlObj = new URL(url);
+        // Get protocol (includes the trailing ':')
+        const protocol = urlObj.protocol;
+        // Get domain (hostname includes subdomains)
+        const domain = urlObj.hostname;
+        // Get path and remove any file names (like index.html)
+        let path = urlObj.pathname;
+        path = path.replace(/\/[^\/]+\.[^\/]+$/, '/');
+        // Ensure path ends with trailing slash
+        if (!path.endsWith('/')) {
+            path += '/';
+        }
+        return `${protocol}//${domain}${path}`;
+    }
+    catch (e) {
+        // Return empty string or throw error based on your needs
+        return '';
+    }
+}
 class WebRKernel extends _jupyterlite_kernel__WEBPACK_IMPORTED_MODULE_0__.BaseKernel {
     constructor(options) {
         super(options);
@@ -128,8 +149,9 @@ class WebRKernel extends _jupyterlite_kernel__WEBPACK_IMPORTED_MODULE_0__.BaseKe
         }, {
             //baseUrl: "https://ouseful-demos.github.io/jupyterlite-m348-demo/webr-dist/",
             //repoUrl: "https://ouseful-demos.github.io/jupyterlite-m348-demo/repo/",
-            baseUrl: "/webr-dist/",
-            repoUrl: "/repo/",
+            // If we are polling from ./lab we need to go up to distro root
+            baseUrl: "../webr-dist/",
+            repoUrl: "../repo/",
             REnv: {
                 R_HOME: '/usr/lib/R',
                 FONTCONFIG_PATH: '/etc/fonts',
@@ -152,6 +174,9 @@ class WebRKernel extends _jupyterlite_kernel__WEBPACK_IMPORTED_MODULE_0__.BaseKe
         dev.control("enable")
       }, webr.plot.new = FALSE)
     `);
+        // Try to set the path
+        const currentUrl = getFormattedUrl();
+        await this.webR.evalRVoid(`JUPYTERLITE_PATH <- "${currentUrl}"`);
         // Create a signal when there is a new plot to be shown in JupyterLite
         await this.webR.evalRVoid(`
       setHook("grid.newpage", function() {
@@ -348,4 +373,4 @@ _WebRKernel_webRConsole = new WeakMap(), _WebRKernel_bitmapCanvas = new WeakMap(
 /***/ })
 
 }]);
-//# sourceMappingURL=lib_index_js.333990c75e043b568d59.js.map
+//# sourceMappingURL=lib_index_js.9ee772b1c36c75a7dfea.js.map

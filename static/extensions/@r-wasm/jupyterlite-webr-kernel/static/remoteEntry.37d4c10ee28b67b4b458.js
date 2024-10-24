@@ -124,7 +124,7 @@ __webpack_require__.d(exports, {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"lib_index_js":"333990c75e043b568d59","style_index_js":"261c102787d911ff26ed","vendors-node_modules_webr_dist_webr_mjs":"529cb2fc69bbf5c016a0","node_modules_webr_dist_sync_recursive":"9f4eb224fc3af63c5e07"}[chunkId] + ".js";
+/******/ 			return "" + chunkId + "." + {"lib_index_js":"9ee772b1c36c75a7dfea","style_index_js":"261c102787d911ff26ed","vendors-node_modules_webr_dist_webr_mjs":"529cb2fc69bbf5c016a0","node_modules_webr_dist_sync_recursive":"9f4eb224fc3af63c5e07"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -557,4 +557,4 @@ __webpack_require__.d(exports, {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=remoteEntry.1ee3b7e02d4721fbe085.js.map
+//# sourceMappingURL=remoteEntry.37d4c10ee28b67b4b458.js.map
