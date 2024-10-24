@@ -122,14 +122,18 @@ function getFormattedUrl(url = window.location.href) {
         const protocol = urlObj.protocol;
         // Get domain (hostname includes subdomains)
         const domain = urlObj.hostname;
+        // Get port if it exists
+        const port = urlObj.port ? `:${urlObj.port}` : '';
         // Get path and remove any file names (like index.html)
         let path = urlObj.pathname;
         path = path.replace(/\/[^\/]+\.[^\/]+$/, '/');
+        // Strip the /lab path element
+        path = path.replace(/\/lab\/?$/, '/');
         // Ensure path ends with trailing slash
         if (!path.endsWith('/')) {
             path += '/';
         }
-        return `${protocol}//${domain}${path}`;
+        return `${protocol}//${domain}${port}${path}`;
     }
     catch (e) {
         // Return empty string or throw error based on your needs
@@ -373,4 +377,4 @@ _WebRKernel_webRConsole = new WeakMap(), _WebRKernel_bitmapCanvas = new WeakMap(
 /***/ })
 
 }]);
-//# sourceMappingURL=lib_index_js.9ee772b1c36c75a7dfea.js.map
+//# sourceMappingURL=lib_index_js.fbaeb318dae5ace43e21.js.map
