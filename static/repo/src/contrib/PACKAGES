@@ -5,11 +5,18 @@ License: GPL-2 | GPL-3
 MD5sum: d4989b8322bf58465e83922e3b7d6283
 NeedsCompilation: no
 
-Package: M348
-Version: 1.3.6.3
+Package: JupyterLiteUtils
+Version: 0.0.1
 Depends: R (>= 2.10)
 License: GPL-3
-MD5sum: fb1d8525f68df6f9df67db4f1b76cf2c
+MD5sum: 678489439f59b804a55aa694a4650c18
+NeedsCompilation: no
+
+Package: M348
+Version: 1.3.6.4
+Depends: R (>= 2.10)
+License: GPL-3
+MD5sum: 1a9aace9edb71db25426aa3a06e7bcb0
 NeedsCompilation: no
 
 Package: MASS
@@ -27,7 +34,7 @@ Version: 1.0.13
 Imports: methods, utils
 Suggests: tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)
 License: GPL (>= 2)
-MD5sum: 58dd1335cbba3e6e62da692352dba277
+MD5sum: 76c3ae129258cfd2b40e088d8d405495
 NeedsCompilation: yes
 
 Package: Rdpack
@@ -36,7 +43,7 @@ Depends: R (>= 2.15.0), methods
 Imports: tools, utils, rbibutils (>= 1.3)
 Suggests: grDevices, testthat, rstudioapi, rprojroot, gbRd
 License: GPL (>= 2)
-MD5sum: 18211b5f2d4ee3edd41a391d332c145a
+MD5sum: e3df2ca65eaff0ec295729fd315d7292
 NeedsCompilation: no
 
 Package: TTR
@@ -82,7 +89,7 @@ Version: 1.14
 Depends: R (>= 3.2.3)
 Suggests: rstudioapi, shiny, testit, rmarkdown, knitr
 License: GPL
-MD5sum: e49f555a2b97431675b4dbcc25d4935b
+MD5sum: 39f6f9781ae7f6e2beaff7ae7a788151
 NeedsCompilation: no
 
 Package: generics
@@ -91,7 +98,7 @@ Depends: R (>= 3.2)
 Imports: methods
 Suggests: covr, pkgload, testthat (>= 3.0.0), tibble, withr
 License: MIT + file LICENSE
-MD5sum: 48751516c75bb97fc0afff9bb55bdf23
+MD5sum: 111e042702182cc8f8a6cca1dd39a24e
 NeedsCompilation: no
 
 Package: jsonlite
@@ -196,7 +203,7 @@ Imports: methods
 LinkingTo: zoo
 Suggests: timeSeries, timeDate, tseries, chron, tinytest
 License: GPL (>= 2)
-MD5sum: fd094812a39be16b49742f775d3f549c
+MD5sum: 4e6d3d8206006bde8aa347ed08db290c
 NeedsCompilation: yes
 
 Package: zoo
