@@ -24,7 +24,7 @@ jobs:
         run: ./build_script.sh
 
       - name: Archive macOS AMD artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: macos-amd-artifact
           path: dist/m348-jupyterlite
@@ -51,7 +51,7 @@ jobs:
         run: ./build_script.sh
 
       - name: Archive macOS ARM artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: macos-arm-artifact
           path: dist/m348-jupyterlite
@@ -75,7 +75,7 @@ jobs:
         run: ./build_script.sh
 
       - name: Archive Linux artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: linux-artifact
           path: dist/m348-jupyterlite
@@ -101,7 +101,7 @@ jobs:
         run: .\build_script.bat
 
       - name: Archive Windows artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: windows-artifact
           path: dist/m348-jupyterlite.exe
