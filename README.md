@@ -64,3 +64,7 @@ DESKTOP_HOMEDIR_DATA_FILE <- "EMA/data/testdata.csv"
 shared_data <- read.csv(DESKTOP_HOMEDIR_DATA_FILE)
 
 ```
+
+## Creating the Documentation
+
+See the `BUILD.md` notes.

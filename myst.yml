@@ -7,9 +7,11 @@ project:
       affiliations: The Open University
   toc:
     - file: DUMMY_ROOT.md
-    - file: INTRO.md
-    - file: README_INSTALL.md
-    - file: README_USER.md
+    - file: INTRO_DESKTOP.md
+    - file: README_DESKTOP_INSTALL.md
+    - file: README_USER_DESKTOP.md
   exports:
-  - template: plain_latex_book
-  #- output: M348-JupyterLite-Desktop-Guide.pdf
+    - format: pdf
+      template: ./curvenote-ou-template
+
+    

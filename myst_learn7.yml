@@ -1,0 +1,17 @@
+version: 1
+project:
+  title: M348 JupyterLite Learn7 / Virtual Campus Resource
+  date: 2024-11-22
+  authors:
+    - name: M348 Module Team
+      affiliations: The Open University
+  toc:
+    - file: DUMMY_ROOT.md
+    - file: INTRO_LEARN7.md
+    - file: README_ACCESS_LEARN7.md
+    - file: README_USER_LEARN7.md
+  exports:
+    - format: pdf
+      template: ./curvenote-ou-template
+
+    

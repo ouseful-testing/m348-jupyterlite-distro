@@ -1,0 +1,17 @@
+version: 1
+project:
+  title: M348 JupyterLite Desktop Application
+  date: 2024-10-23
+  authors:
+    - name: M348 Module Team
+      affiliations: The Open University
+  toc:
+    - file: DUMMY_ROOT.md
+    - file: INTRO_DESKTOP.md
+    - file: README_DESKTOP_INSTALL.md
+    - file: README_USER_DESKTOP.md
+  exports:
+    - format: pdf
+      template: ./curvenote-ou-template
+
+    
