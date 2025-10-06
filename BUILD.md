@@ -2,7 +2,7 @@
 
 Documentation files can be built using MyST publishing tools using the configuration found in `myst.yml`.
 
-Two myst configurations are providind:
+Two myst configurations are provided:
 
 - documentation for Desktop application (`myst_desktop.yml`)
 - documentation for Learn7 application (`myst_learn7.yml`)

@@ -36,4 +36,4 @@ If the value of the path up to the `/lab` part of the address *does not* match t
 
 ## In Case of Further Issues
 
-If you encounter any other issues with running the desktop application, using JupyterLab, or working with the notebooks, please raise them with your tutor or the M348 module team.
+If you encounter any other issues with running the desktop application, using JupyterLite, or working with the notebooks, please raise them with your tutor or the M348 module team.
